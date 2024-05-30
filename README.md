@@ -10,16 +10,31 @@ The Employee Manager is a full-stack web application designed to help organizati
 
 ## Setup Instructions
 To set up the Employee Manager application locally, follow these steps:
-1. **Database Setup**:
-   - Install MySQL and create a database named `employeemanager`.
-   - Run the SQL script located in `backend/sql/employeemanager.sql` to set up the tables.
 
-2. **Backend Setup**:
+### Database Setup:
+To set up the database for the Employee Manager application, follow these steps:
+
+1. **Install MySQL**: Ensure that MySQL is installed on your system. You can download it from [MySQL official site](https://dev.mysql.com/downloads/mysql/).
+
+2. **Create Database**:
+   - Open MySQL Workbench.
+   - Connect to your MySQL server.
+   - Execute the following SQL command to create a new database: `CREATE DATABASE employeemanager;`
+
+3. **Import the SQL File**:
+   - In MySQL Workbench, select the `employeemanager` database you just created.
+   - Go to the 'Server' menu and choose 'Data Import'.
+   - Select 'Import from Self-Contained File', and browse to select the `employeemanager_employee.sql` file located in the `database` folder of this repository.
+   - Start the import by clicking 'Start Import'.
+
+This process will set up the database schema and import all necessary data required to run the Employee Manager application.
+
+### Backend Setup:
    - Navigate to the `backend` directory.
    - Run `mvn clean install` to build the project.
    - Start the Spring Boot application by running `java -jar target/employeemanager-0.1.0.jar`.
 
-3. **Frontend Setup**:
+### Frontend Setup:
    - Navigate to the `frontend` directory.
    - Run `npm install` to install all dependencies.
    - Start the Angular application with `ng serve`.
